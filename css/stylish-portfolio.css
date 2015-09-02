@@ -161,6 +161,31 @@ hr.small {
     background-size: cover;
     -o-background-size: cover;
 }
+/* Popover */
+.popover {
+    padding: 4px
+
+}
+
+/* Popover Header */
+.popover-title {
+    background-color: black;
+    color: #FFFFFF;
+    font-size: 14px;
+    text-align:center;
+}
+
+/* Popover Body */
+.popover-content {
+    background-color: gray;
+    color: #FFFFFF;
+    padding: 20px;
+}
+
+/* Popover Arrow */
+.arrow {
+    border-right-color: transparent;
+}
 
 /* About */
 
