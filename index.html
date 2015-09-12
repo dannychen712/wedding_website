@@ -210,8 +210,20 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h3>RSVP Here</h3>
-                    <a data-toggle="accept_form" title="Registration Form" data-content="Register here" data-placement="top" class="btn btn-lg btn-light">Happily Accept</a>
-                    <a data-toggle="accept_form" title="Registration Form" data-content="Register here" data-placement="top" class="btn btn-lg btn-dark">Regretfully Decline</a>
+                    <a data-toggle="accept_form" title="Registration Form" data-placement="top" class="btn btn-lg btn-light" data-html="true"
+                       data-content="
+                       <form role='form' class='form-vertical'>
+                       <div class='container-fluid'>
+                               <input type='text' class='form-control' id='firstname_accept' placeholder='First Name'>
+                               <input type='text' class='form-control' id='lastname_accept' placeholder='Last Name'><br>
+                               <input type='text' class='form-control' id='address1_accept' placeholder='Street Address'><br>
+                               <input type='text' class='form-control' id='address2_accept' placeholder='Suite, Floor, Apt, Room'><br>
+                               <input type='text' class='form-control' id='city_accept' placeholder='City'><br>
+                               <input type='text' class='form-control' id='state_accept' placeholder='State'><br>
+                           </div>
+                       </div>
+                    ">Happily Accept</a>
+                    <a data-toggle="reject_form" title="Registration Form" data-placement="top" class="btn btn-lg btn-dark" data-content="Register here">Regretfully Decline</a>
                 </div>
             </div>
         </div>
@@ -268,7 +280,7 @@
     // Closes the sidebar menu
     $("#menu-close").click(function(e) {
         e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
+        $("#sidebar-wra pper").toggleClass("active");
     });
 
     // Opens the sidebar menu
@@ -294,9 +306,14 @@
         });
     });
 
-    // Pop up registration form
+    // Pop up registration acceptance form
     $(document).ready(function(){
-        $('[data-toggle="accept_form"]').popover();
+    $('[data-toggle="accept_form"]').popover();
+    });
+
+    // Pop up registration rejection form
+    $(document).ready(function(){
+        $('[data-toggle="reject_form"]').popover();
     });
     </script>
 
