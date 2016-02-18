@@ -46,8 +46,8 @@ body {
 
 .btn-light {
     border-radius: 0;
-    color: #333;
-    background-color: rgb(255,255,255);
+    color: #C7995E;
+    background-color: rgb(67, 66, 82);
 }
 
 .btn-light:hover,
@@ -190,12 +190,16 @@ hr.small {
 /* About */
 
 .about {
+    background-color: #102540;
+    color: #C7995E;
     padding: 50px 0;
 }
 
 /* Services */
 
 .services {
+    background-color: #102540;
+    color: #C7995E;
     padding: 50px 0;
 }
 
