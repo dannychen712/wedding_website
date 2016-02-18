@@ -20,6 +20,7 @@ body {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
+    color: #FFBF00;
 }
 
 .text-vertical-center h1 {
@@ -191,7 +192,7 @@ hr.small {
 
 .about {
     background-color: #102540;
-    color: #C7995E;
+    color: #FFDCDC;
     padding: 50px 0;
 }
 
@@ -199,7 +200,7 @@ hr.small {
 
 .services {
     background-color: #102540;
-    color: #C7995E;
+    color: #FFDCDC;
     padding: 50px 0;
 }
 
