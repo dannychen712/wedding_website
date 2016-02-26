@@ -20,14 +20,15 @@ body {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
+    font-family: 'Tangerine', cursive;
 }
 
 .text-vertical-center h1 {
     margin: 0;
     padding: 0;
-    font-size: 4.5em;
+    font-size: 8.5em;
     font-weight: 700;
-    color: #FFBF00;
+    color:   #f8c471;
     text-shadow: 2px 2px 1px #000,
     -2px -2px 1px #000,
     -2px 2px 1px #000,
@@ -35,7 +36,8 @@ body {
 }
 
 .text-vertical-center h3 {
-    color: #FFBF00;
+    color: #f8c471;
+    font-size: 3em;
     text-shadow: 2px 2px 1px #000,
     -1px -2px 1px #000,
     -1px 2px 1px #000,
