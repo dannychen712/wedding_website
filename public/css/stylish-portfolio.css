@@ -44,6 +44,9 @@ body {
     1px -2px 1px #000;
 }
 
+#linkout-header {
+	color: #FFDCDC;
+}
 /* Custom Button Styles */
 
 .btn-dark {
@@ -285,5 +288,5 @@ footer {
 }
 
 #footer_text {
-    color: red;
+    color: #FFDCDC;
 }
