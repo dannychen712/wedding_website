@@ -51,9 +51,8 @@ body {
 
 .btn-dark {
     border-radius: 0;
-    color: #FFDCDC;
+    color: #C7995E;
     background-color: rgba(67, 66, 82,0.5);
-    font-size: 2em;
 }
 
 .btn-dark:hover,
@@ -65,7 +64,7 @@ body {
 
 .btn-light {
     border-radius: 0;
-    color: #C7995E;
+    color: #FFDCDC;
     background-color: rgb(67, 66, 82);
 }
 
@@ -264,6 +263,11 @@ hr.small {
     opacity: 0.8;
 }
 
+.rsvp-header {
+	font-family: 'Tangerine', cursive;
+    font-size: 50px;
+    color: #FFDCDC;
+}
 .col-md-6 {
     padding-right:35px;
     padding-bottom: 40px;
