@@ -211,7 +211,9 @@ hr.small {
 .about {
     background-color: #102540;
     color: #FFDCDC;
-    padding: 50px 0;
+    padding-top: 25px;
+    font-family: 'Tangerine', cursive;
+    font-size: 26px;
 }
 
 /* Services */
@@ -219,7 +221,10 @@ hr.small {
 .services {
     background-color: #102540;
     color: #FFDCDC;
-    padding: 50px 0;
+    padding-top: 20px;
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 25px;
 }
 
 .service-item {
@@ -242,12 +247,13 @@ hr.small {
 
 /* Portfolio */
 
-.portfolio {
-    background-color: #102540;
+.h2 {
+    font-family: 'Tangerine', cursive;
+    font-size: 50px;
 }
 
-.portfolio-item {
-    margin-bottom: 30px;
+.portfolio {
+    background-color: #102540;
 }
 
 .img-portfolio {
@@ -258,6 +264,10 @@ hr.small {
     opacity: 0.8;
 }
 
+.col-md-6 {
+    padding-right:35px;
+    padding-bottom: 40px;
+}
 /* Call to Action */
 
 .call-to-action {
@@ -269,10 +279,17 @@ hr.small {
 }
 
 .bullets {
-    float: left;
-    font-align: right;
-    font-size: 14px;
+    text-align: left;
+    font-size: 22px;
+    font-weight: bold;
 }
+
+.portfolio-item {
+    margin-bottom: 30px;
+    font-size: 16px;
+    text-align: left;
+}
+
 /* Map */
 
 .map {
