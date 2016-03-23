@@ -29,7 +29,7 @@ gem 'spring',        group: :development
 # gem 'bcrypt', '~> 3.1.7'
 
 group :production do
-  gem 'pg'
+  gem 'sqlite3'
   gem 'rails_12factor'
 end
 
