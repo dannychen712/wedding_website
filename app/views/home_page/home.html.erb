@@ -217,7 +217,7 @@
         <div class="rsvp-header">
           <p>RSVP</p>
         </div>
-        <a title="Registration Form"  class="btn btn-lg btn-light"><% link_to 'Registration'%>Happily Accept</a>
+        <a title="Registration Form"  class="btn btn-lg btn-light" href="/registrations">Happily Accept</a>
         <a title="Registration Form"  class="btn btn-lg btn-light">Regretfully Decline</a>
       </div>
     </div>
@@ -288,16 +288,6 @@
         }
       }
     });
-  });
-
-  // Pop up registration acceptance form
-  $(document).ready(function(){
-    $('[data-toggle="accept_form"]').popover();
-  });
-
-  // Pop up registration rejection form
-  $(document).ready(function(){
-    $('[data-toggle="reject_form"]').popover();
   });
 </script>
 
