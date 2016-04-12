@@ -1,0 +1,170 @@
+
+<%= form_for(@user) do |f| %>
+    <% if @user.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+          <ul>
+            <% @user.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :first_name %><br>
+      <%= f.text_field :first_name %>
+    </div>
+    <div class="field">
+      <%= f.label :last_name %><br>
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="field">
+      <%= f.label :email %><br>
+      <%= f.text_field :email %>
+    </div>
+    <div class="field">
+      <%= f.label :password_digest %><br>
+      <%= f.text_field :password_digest %>
+    </div>
+    <div class="field">
+      <%= f.label :attending %><br>
+      <%= f.check_box :attending %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RSVP for Danny & Sierra's Wedding</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,400,400italic,500,500italic">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Favicon and touch icons -->
+  <link rel="shortcut icon" href="assets/ico/favicon.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+</head>
+
+<body>
+
+<!-- Contact Form -->
+<div class="c-form-container section-container section-container-image-bg">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2 c-form section-description wow fadeIn">
+        <h1><strong>RSVP for Danny & Sierra's Wedding</strong></h1>
+        <p>Check the back of your invitation to find your RSVP code. If you've lost your invitation you can email us at scshorey@gmail.com and we'll send it to you.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3 c-form-box wow fadeInUp">
+
+        <div class="c-form-top">
+          <div class="c-form-top-left">
+            <h3></h3>
+            <p></p>
+          </div>
+          <div class="c-form-top-right">
+          </div>
+        </div>
+        <div class="c-form-bottom">
+          <form role="form" action="assets/contact.php" method="post">
+            <div class="form-group">
+              <label for="c-form-name">
+                <span class="label-text">Name:</span>
+                <span class="contact-error"></span>
+              </label>
+              <input type="text" name="name" placeholder="Your name..." class="c-form-name form-control" id="c-form-name">
+            </div>
+            <div class="form-group">
+              <label for="c-form-email">
+                <span class="label-text">Email:</span>
+                <span class="contact-error"></span>
+              </label>
+              <input type="text" name="email" placeholder="Your email address..." class="c-form-email form-control" id="c-form-email">
+            </div>
+            <div class="form-group">
+              <label for="c-form-subject">
+                <span class="label-text">Invitation Code:</span>
+                <span class="contact-error"></span>
+              </label>
+              <input type="text" name="subject" placeholder="Invitation Code..." class="c-form-subject form-control" id="c-form-subject">
+            </div>
+            <div class="form-group">
+              <label for="c-form-message">
+                <span class="label-text">RSVP Yes or No:</span>
+                <span class="contact-error"></span>
+              </label>
+              <textarea name="message" placeholder="Enter Yes or No..." class="c-form-message form-control" id="c-form-message"></textarea>
+            </div>
+            <button type="submit" class="btn">RSVP</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12 c-form-info-title wow fadeInUp">
+        <h3></h3>
+      </div>
+    </div>
+
+    <div class="row">
+    </div>
+
+  </div>
+</div>
+
+
+<!-- Javascript -->
+<script src="assets/js/jquery-1.11.1.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.backstretch.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/scripts.js"></script>
+
+<!--[if lt IE 10]>
+<script src="assets/js/placeholder.js"></script>
+<![endif]-->
+
+</body>
+
+</html>
