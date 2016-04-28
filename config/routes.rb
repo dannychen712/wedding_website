@@ -2,8 +2,9 @@ Rails.application.routes.draw do
   resources :users
   root 'home_page#home'
 
-  resources :registrations
-  get '/registrations' => 'registrations#index'
+  # resources :registrations
+  # get '/registrations' => 'registrations#index'
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
