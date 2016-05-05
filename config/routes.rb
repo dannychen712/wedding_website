@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  resources :users
   root 'home_page#home'
+  get 'login' => 'sessions#new'
+  post 'login' => 'sessions#create'
+  delete 'logout'  => 'sessions#destroy'
+
+  resources :users
 
   # resources :registrations
   # get '/registrations' => 'registrations#index'
