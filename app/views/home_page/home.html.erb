@@ -223,8 +223,9 @@
           <p>RSVP</p>
         </div>
         <a title="Registration Form" class="btn btn-lg btn-light" href="/users/new">Happily Accept</a>
-        <a title="Registration Form" class="btn btn-lg btn-light">Regretfully Decline</a>
+        <a title="Decline Form" class="btn btn-lg btn-light">Regretfully Decline</a>
       </div>
+      <%= link_to "Already Registered?", login_path(@user) %>
     </div>
   </div>
 </aside>
@@ -247,7 +248,7 @@
         <p>2630 Cullen St<br>Los Angeles, CA 90034</p>
         <ul class="list-unstyled">
           <li><i class="fa fa-phone fa-fw"></i> (718) 594 - 5146</li>
-          <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:name@example.com">scshorey@gmail.com</a>
+          <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:scshorey@gmail.com">scshorey@gmail.com</a>
           </li>
         </ul>
         <br>

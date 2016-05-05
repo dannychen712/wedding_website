@@ -1,10 +1,21 @@
 Rails.application.routes.draw do
-  root 'home_page#home'
-  get 'login' => 'sessions#new'
-  post 'login' => 'sessions#create'
-  delete 'logout'  => 'sessions#destroy'
+  root to: 'home_page#home'
 
-  resources :users
+  resources :sessions, only: [:new, :create, :destroy]
+
+  get "/login" => "sessions#new", as: "login"
+  delete "/logout" => "session#destroy", as: "logout"
+
+  resources :users do
+    root to: 'users#show'
+    get '/new' => 'users#new'
+  end
+
+  # get 'login' => 'sessions#new'
+  # post 'login' => 'sessions#create'
+  # delete 'logout'  => 'sessions#destroy'
+  #
+  # resources :users
 
   # resources :registrations
   # get '/registrations' => 'registrations#index'
