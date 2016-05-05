@@ -13,26 +13,13 @@
 
 ActiveRecord::Schema.define(version: 20160412045158) do
 
-  create_table "registrations", force: true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "address1"
-    t.string   "address2"
-    t.string   "city"
-    t.string   "state"
-    t.string   "email"
-    t.string   "phone_number"
-    t.string   "plus_one_number"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "users", force: true do |t|
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"
     t.string   "password_digest"
     t.boolean  "attending"
+    t.integer  "phone_number"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
