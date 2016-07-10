@@ -31,6 +31,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'sqlite3'
 gem 'rails_12factor'
 
+gem 'awesome_print'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
