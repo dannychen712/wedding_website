@@ -1,4 +1,4 @@
-<%= form_for([@user]) do |f| %>
+<%= form_for(@user) do |f| %>
     <% if @user.errors.any? %>
         <div id="error_explanation">
           <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
@@ -31,7 +31,7 @@
       <%= f.telephone_field :phone_number %>
     </div>
     <div class="field">
-      <%= f.label :attending %><br>
+      <%= f.label "Will you be attending?" %><br>
       <%= f.check_box :attending %>
     </div>
     <div class="actions">

@@ -1,3 +1,30 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  background-color: #102540;
+  color: #FFDCDC;
+  text-align: center;
+}
+
+h1 {
+  letter-spacing: 2px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.field {
+  padding: 10px;
+}
+
+input {
+  width: 25%;
+  padding: 12px;
+  border-radius: 8px;
+  -webkit-transition: width 0.4s ease-in-out;
+}
+
+input:focus {
+  background-color: #F8C471;
+
+}
+
