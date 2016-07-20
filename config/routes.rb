@@ -1,25 +1,11 @@
 Rails.application.routes.draw do
   root to: 'home_page#home'
 
-  resources :sessions, only: [:new, :create, :destroy]
-
-  get "/login" => "sessions#new", as: "login"
-  delete "/logout" => "session#destroy", as: "logout"
+  get '/login' => 'users#new'
 
   resources :users do
     root to: 'users#show'
-    get '/new' => 'users#new'
   end
-
-  # get 'login' => 'sessions#new'
-  # post 'login' => 'sessions#create'
-  # delete 'logout'  => 'sessions#destroy'
-  #
-  # resources :users
-
-  # resources :registrations
-  # get '/registrations' => 'registrations#index'
-
 
 
   # The priority is based upon order of creation: first created -> highest priority.
