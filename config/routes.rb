@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   get '/login' => 'users#new'
   get '/validate_name' => 'users#non_invite'
+  get '/already_registered' => 'users#already_registered'
 
   resources :users do
     root to: 'users#show'

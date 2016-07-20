@@ -20,16 +20,20 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     respond_to do |format|
-      if InvitationList.where(first_name: user_params[:first_name]).length >= 1 && InvitationList.where(last_name: user_params[:last_name]).length >= 1
-        if @user.save
-          format.html { redirect_to @user, notice: 'User was successfully created.' }
-          format.json { render :show, status: :created, location: @user }
-        else
-          format.html { render :new, notice: 'User cannot be created' }
-          format.json { render json: @user.errors, status: :unprocessable_entity }
-        end
+      if User.where(first_name: user_params[:first_name], last_name: user_params[:last_name]).length > 0
+        format.html { redirect_to '/already_registered'}
       else
-        format.html { redirect_to '/validate_name'}
+        if InvitationList.where(first_name: user_params[:first_name]).length >= 1 && InvitationList.where(last_name: user_params[:last_name]).length >= 1
+          if @user.save
+            format.html { redirect_to @user, notice: 'User was successfully created.' }
+            format.json { render :show, status: :created, location: @user }
+          else
+            format.html { render :new, notice: 'User cannot be created' }
+            format.json { render json: @user.errors, status: :unprocessable_entity }
+          end
+        else
+          format.html { redirect_to '/validate_name'}
+        end
       end
     end
   end
