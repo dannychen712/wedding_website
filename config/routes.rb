@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root to: 'home_page#home'
 
   get '/login' => 'users#new'
+  get '/validate_name' => 'users#non_invite'
 
   resources :users do
     root to: 'users#show'
