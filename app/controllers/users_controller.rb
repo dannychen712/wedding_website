@@ -23,20 +23,18 @@ class UsersController < ApplicationController
       if User.where(first_name: user_params[:first_name], last_name: user_params[:last_name]).length > 0
         format.html { redirect_to '/already_registered'}
       else
-        if InvitationList.where(first_name: user_params[:first_name]).length >= 1 && InvitationList.where(last_name: user_params[:last_name]).length >= 1
-          if @user.save
-            format.html { redirect_to @user, notice: 'User was successfully created.' }
-            format.json { render :show, status: :created, location: @user }
-          else
-            format.html { render :new, notice: 'User cannot be created' }
-            format.json { render json: @user.errors, status: :unprocessable_entity }
-          end
+        if @user.save
+          format.html { redirect_to @user, notice: 'User was successfully created.' }
+          format.json { render :show, status: :created, location: @user }
         else
-          format.html { redirect_to '/validate_name'}
+          format.html { render :new, notice: 'User cannot be created' }
+          format.json { render json: @user.errors, status: :unprocessable_entity }
         end
       end
     end
   end
+
+
 
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
