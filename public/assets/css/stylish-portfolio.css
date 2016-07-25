@@ -178,6 +178,8 @@ hr.small {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    background-color: #102540;
+
 }
 /* Popover */
 .popover {
@@ -235,13 +237,29 @@ hr.small {
 .callout {
     display: table;
     width: 100%;
-    height: 500px;
+    height: 80%;
     color: #fff;
-    background: url(../img/callout.jpg) no-repeat center center scroll;
+    background: url(../img/callout.jpg) no-repeat left center scroll;
+    background-color: #102540;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+
+}
+
+.callout {
+    display: table;
+    width: 100%;
+    height: 80%;
+    color: #fff;
+    background: url(../img/callout.jpg) no-repeat left center scroll;
+    background-color: #102540;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+
 }
 
 /* Portfolio */
