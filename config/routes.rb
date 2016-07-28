@@ -4,10 +4,12 @@ Rails.application.routes.draw do
   get '/login' => 'users#new'
   get '/validate_name' => 'users#non_invite'
   get '/already_registered' => 'users#already_registered'
+  get '/show_all' => 'users#show_all'
 
   resources :users do
     root to: 'users#show'
   end
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

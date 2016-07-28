@@ -1,0 +1,22 @@
+<% User.all.each do |user| %>
+    <div class="show">
+      <p></p>
+        <strong>First name:</strong>
+        <%= user.first_name %><br />
+
+        <strong>Last name:</strong>
+        <%= user.last_name %><br />
+
+        <strong>Email:</strong>
+        <%= user.email %><br />
+
+        <strong>Phone:</strong>
+        <%= user.phone_number %><br />
+
+        <strong>Attending:</strong>
+        <%= user.attending %><br />
+      <%= link_to 'Edit', edit_user_path(user) %> |
+      <%= link_to 'Back', root_path %>
+      <p></p>
+    </div>
+<%end%>
