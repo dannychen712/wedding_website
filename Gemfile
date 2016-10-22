@@ -34,7 +34,7 @@ gem 'rails_12factor'
 gem 'awesome_print'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -42,3 +42,4 @@ gem 'awesome_print'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'pg'
